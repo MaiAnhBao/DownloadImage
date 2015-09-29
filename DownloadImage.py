@@ -32,36 +32,36 @@ def main(url, out_folder="/test/"):
   
 def _usage():
     print( "usage: python dumpimages.py http://example.com [outpath]")
-  
-# if __name__ == "__main__":
-#     url = "http://blogtruyen.com/truyen/sweet-guy/chap-" 
-#     out_folder = "C://Test//SweetGuy"
-#     for i in range(3,30):
-#             url1 = url + str(i)
-#             outfolder1 = out_folder + str(i)
-#             if not os.path.exists(outfolder1):
-#                 os.makedirs(outfolder1)
-#             if not url1.lower().startswith("http"):
-#                 _usage()
-#                 sys.exit(-1)
-#             main(url1, outfolder1)
+    
+if __name__ == "__main__":
+    url = "http://blogtruyen.com/truyen/shin-kotaro-makaritoru-juudouhen/chap-" 
+    out_folder = "C://Test//"
+    for i in range(226):
+            url1 = url + str(i)
+            outfolder1 = out_folder + str(i)
+            if not os.path.exists(outfolder1):
+                os.makedirs(outfolder1)
+            if not url1.lower().startswith("http"):
+                _usage()
+                sys.exit(-1)
+            main(url1, outfolder1)
 
 #os.listdir("somedirectory")
 # params = urlparse('application/rss+xml')
 # params = params.encode('utf-8')
 #page = urlopen("http://www.dantri.com.vn", "html")
 
-import webbrowser
-
-url = 'http://dantri.com.vn/'
-
-soup = bs(urlopen("http://dantri.com.vn/giai-tri.htm"),"html.parser")
-
-for link in soup.findAll('a'):
-    if 'giai-tri' in link['href']:
-        webbrowser.open_new_tab(url + link["href"])
-        print(link["href"])
-        sleep(100)
+# import webbrowser
+# 
+# url = 'http://dantri.com.vn/'
+# 
+# soup = bs(urlopen("http://dantri.com.vn/giai-tri.htm"),"html.parser")
+# 
+# for link in soup.findAll('a'):
+#     if 'giai-tri' in link['href']:
+#         webbrowser.open_new_tab(url + link["href"])
+#         print(link["href"])
+#         sleep(100)
 #, type='application/rss+xml'
 
 # import urllib, urllib2, cookielib
